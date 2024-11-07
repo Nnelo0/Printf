@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 13:07:39 by ebroudic          #+#    #+#             */
-/*   Updated: 2024/11/06 12:23:58 by ebroudic         ###   ########.fr       */
+/*   Updated: 2024/11/07 09:51:25 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ int	printf_string(char *s)
 
 	if (!s)
 		return (write(1, "(null)", 6));
-	count = -1;
-	while (s[++count])
-		write (1, &s[count], 1);
+	count = 0;
+	while (s[count])
+		write (1, &s[count++], 1);
 	return (count);
 }

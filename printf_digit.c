@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 09:27:49 by ebroudic          #+#    #+#             */
-/*   Updated: 2024/11/06 11:14:26 by ebroudic         ###   ########.fr       */
+/*   Updated: 2024/11/07 10:58:23 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 int	printf_digit(int n)
 {
-	int		count;
+	int	count;
 
 	count = 0;
 	if (n == -2147483648)
-		return(write(1, "-2147483648", 11));
+		return (write(1, "-2147483648", 11));
 	if (n < 0)
 	{
 		write(1, "-", 1);

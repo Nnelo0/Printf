@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 12:42:24 by ebroudic          #+#    #+#             */
-/*   Updated: 2024/11/06 08:40:44 by ebroudic         ###   ########.fr       */
+/*   Updated: 2024/11/07 10:58:07 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	printf_char(int c)
 {
-	return(write(1, &c, 1));
+	return (write(1, &c, 1));
 }

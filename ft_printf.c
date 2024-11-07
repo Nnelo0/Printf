@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 12:50:19 by ebroudic          #+#    #+#             */
-/*   Updated: 2024/11/06 12:36:10 by ebroudic         ###   ########.fr       */
+/*   Updated: 2024/11/07 11:17:00 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,19 +28,20 @@ static int	ft_ckua(const char *s, int i, va_list list)
 	else if (s[i] == 'u')
 		count2 += printf_udigit(va_arg(list, unsigned int));
 	else if (s[i] == 'x')
-		count2 += printf_hex(va_arg(list, unsigned long), 0);
+		count2 += printf_hex(va_arg(list, unsigned int), 0);
 	else if (s[i] == 'X')
-		count2 += printf_hex(va_arg(list, unsigned long), 1);
+		count2 += printf_hex(va_arg(list, unsigned int), 1);
 	else if (s[i] == '%')
 		return (printf_char('%'));
 	return (count2);
 }
+
 int	ft_printf(const char *s, ...)
 {
 	va_list	list;
 	int		count;
 	int		i;
-	
+
 	va_start(list, s);
 	i = 0;
 	count = 0;
@@ -59,14 +60,14 @@ int	ft_printf(const char *s, ...)
 	return (count);
 }
 
-// int main()
-// {
-// 	int	i;
-// 	void *a = "Hello World !";
+/* int main()
+{
+	int	i;
+ 	void *b = "hello";
 
-// 	i = ft_printf("%c / %s / %p / %d / %i / %u / %x / %X / %%\n", 'z', "Hello", a, 42, -42, 42, 42, 42);
-// 	ft_printf("[%d]\n", i);
-// 	i = printf("%c / %s / %p / %d / %i / %u / %x / %X / %%\n", 'z', "Hello", a, 42, -42, 42, 42, 42);
-// 	printf("[%d]\n", i);
-// 	return (0);
-// }
+	i = ft_printf("%p\n",b);
+	ft_printf("[%d]\n", i);
+	i = ft_printf("%p\n", b);
+	printf("[%d]\n", i);
+ 	return (0);
+} */
